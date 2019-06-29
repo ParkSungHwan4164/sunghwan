@@ -1,0 +1,36 @@
+void draw(){
+  println("I'm starting");
+}
+void draw(){
+  printfln("I'm running");
+}
+
+void setup(){
+  size(480,120);
+  fill(0,102);
+  noStroke();}
+  void draw(){
+ line(mouseX,mouseY,pmouseX,pmouseY);
+  }
+*/
+/*
+void draw(){
+  float weight = dist(mouseX,mouseY,pmouseX,pmouseY);
+  strokeWeight(weight);
+  line(mouseX,mouseY,pmouseX,pmouseY);
+}
+*/
+float x;
+float easing=0.5;
+
+void setup(){
+ background(100);
+ size(1000,600);
+ strokeWeight(2);
+}
+void draw(){
+  float targetX=mouseX;
+  x+=(targetX-x)*easing;
+  ellipse(x,40,12,12);
+  println(targetX+":"+x);
+}
