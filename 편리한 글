@@ -1,0 +1,16 @@
+PFont font;
+String q="That's one small step for man . . .";
+void setup(){
+  size(480,120);
+font=createFont("SourceCodePro-Regular.ttf",24);
+textFont(font);
+
+}
+
+void draw(){
+background(100);
+
+  text(q,26,24,240,100);
+
+}
+  
