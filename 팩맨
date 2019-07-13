@@ -1,0 +1,25 @@
+float x=110;
+int direction=1;
+int radius=40;
+float speed=3;
+
+void setup(){
+  size(240,120);
+  ellipseMode(RADIUS);
+}
+
+void draw(){
+  background(0);
+  x+=speed*direction;
+if((x>width-radius)||(x<radius)){
+  direction=-direction;
+}
+if(direction==1){
+  arc(x,60,radius,radius,radians(28),radians(330));
+}
+
+else{
+  arc(x,60,radius,radius,radians(210),radians(510));
+}
+
+}
